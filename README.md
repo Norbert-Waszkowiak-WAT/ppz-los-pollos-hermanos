@@ -52,26 +52,26 @@ Grupą docelową są miłośnicy przygód watahy.
 
 **Etap 1: Stworzenie postaci, animacji i poziomów,sterowanie**  
 **Zadania:**
-   - Projektowanie postaci (Jan Pniewski)
-   - Projektowanie poziomów (Bartłomiej Dziurzyński)
-   - Animacje (Jan Pniewski , Bartłomiej Dziurzyński)
-   - Kod (Stanisław Pniewski, Jan Pniewski)
+   - Projektowanie postaci
+   - Projektowanie poziomów 
+   - Animacje 
+   - Kod 
 
 **Etap 2: Implementacja animacji, ekwipunek postaci**  
 **Zadania:**
-   -  Animacje (Jan Pniewski,Stanisław Pniewski)
-   -  Ekwipunek (Bartłomiej Dziurzyński)
+   -  Animacje 
+   -  Ekwipunek
 
 **Etap 3: Implementacja modułu walki i dodanie przeciwników**  
 **Zadania**
-   - System walki z przeciwnikami(Stanisław Pniewski)
-   - System HP (Jan Pniewski)
-   - Zdarzenia specjalne dla wybranych poziomów (Bartłomiej Dziurzyński)
+   - System walki z przeciwnikami
+   - System HP 
+   - Zdarzenia specjalne dla wybranych poziomów 
 
 **Etap 4: Zapisy postępu i ostatnie szlify grafiki i kodu**  
 **Zadania:**
-   - Możliwość zapisu postępu w grze (Bartłomiej Dziurzyński)
-   - DOskonalenie mechanik (Jan Pniewski,Stanisław Pniewski)
+   - Możliwość zapisu postępu w grze 
+   - DOskonalenie mechanik 
 
 ### 8. Kryteria sukcesu
    - Poprawne działanie kodu wraz z dynamicznymi animacjami.
