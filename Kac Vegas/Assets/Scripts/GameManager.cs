@@ -16,16 +16,17 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        
+
+
     }
 
-    public void gameOver()
+    public void GameOver()
     {
 
         gameOverUI.SetActive(true);
     }
 
-    public void restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
