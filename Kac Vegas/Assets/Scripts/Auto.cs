@@ -75,7 +75,7 @@ public class Auto : MonoBehaviour
 
 
             isDead = true;  
-            gameManager.gameOver();
+            gameManager.GameOver();
             autoControls.Disable();
 
         }
