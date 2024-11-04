@@ -80,6 +80,13 @@ Grupą docelową są miłośnicy przygód watahy.
 
 Etap 1: 
 Poziom 1:
+- Zrobiliśmy główne postacie z animacjami 
+- Stworzyliśmy tekstury poziomów/map
+- Opracowaliśmy początkowy system dialogów
+- Ukończyliśmy system poruszania się
+- Przygotowaliśmy tekstury obiektów: tygrysa, auta, drzewa
+- Zaimplementowaliśmy generowanie losowych przeszkód
+
 ![Zrzut ekranu 2024-11-04 181454](https://github.com/user-attachments/assets/c3990e69-accb-484a-8194-b31a4e828c7e)
 ![Zrzut ekranu 2024-11-04 182319](https://github.com/user-attachments/assets/3daac27e-23dc-4956-9acd-68182863bc04)
 ![Zrzut ekranu 2024-11-04 182352](https://github.com/user-attachments/assets/2e4a0b18-1197-40f8-b72c-70056b00ad83)
