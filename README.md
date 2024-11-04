@@ -76,3 +76,15 @@ Grupą docelową są miłośnicy przygód watahy.
 ### 8. Kryteria sukcesu
    - Poprawne działanie kodu wraz z dynamicznymi animacjami.
    - Poprawne działanie zapisu.
+
+
+Etap 1: 
+Poziom 1:
+![Zrzut ekranu 2024-11-04 181454](https://github.com/user-attachments/assets/c3990e69-accb-484a-8194-b31a4e828c7e)
+![Zrzut ekranu 2024-11-04 182319](https://github.com/user-attachments/assets/3daac27e-23dc-4956-9acd-68182863bc04)
+![Zrzut ekranu 2024-11-04 182352](https://github.com/user-attachments/assets/2e4a0b18-1197-40f8-b72c-70056b00ad83)
+![Zrzut ekranu 2024-11-04 182650](https://github.com/user-attachments/assets/afb5d326-1776-4538-abd3-a5c94716f050)
+![Zrzut ekranu 2024-11-04 182705](https://github.com/user-attachments/assets/42391f0f-6ef1-43ef-8734-56b73b645b39)
+
+
+
