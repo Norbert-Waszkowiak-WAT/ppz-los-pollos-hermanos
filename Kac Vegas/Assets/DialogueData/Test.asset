@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - 'TADALOOOOO!
+  - 'Hello!
 
-    HEloo'
-  - 'What''s going on ??
-
-    NARA'
+'
+  - Hello #2
