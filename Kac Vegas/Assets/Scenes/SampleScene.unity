@@ -5933,7 +5933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 230066778}
   textLabel: {fileID: 1995150669}
-  testDialogue: {fileID: 11400000, guid: c9a58addcfe941e4ca94b91e5157fd46, type: 2}
+  player: {fileID: 937286543}
 --- !u!114 &795712369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6174,6 +6174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  dialogueUI: {fileID: 795712368}
+  interactable: {fileID: 0}
+  canControl: 1
 --- !u!95 &937286544
 Animator:
   serializedVersion: 5
@@ -6258,7 +6261,8 @@ GameObject:
   - component: {fileID: 987624839}
   - component: {fileID: 987624838}
   - component: {fileID: 987624841}
-  m_Layer: 0
+  - component: {fileID: 987624842}
+  m_Layer: 6
   m_Name: mercedes benz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6388,6 +6392,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.033304468, y: -0.10658086}
   m_Size: {x: 3.1779008, y: 1.8984859}
   m_Direction: 1
+--- !u!114 &987624842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987624837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d394a91c19ff8449ea01d995efdf2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: c9a58addcfe941e4ca94b91e5157fd46, type: 2}
 --- !u!1 &1310490913
 GameObject:
   m_ObjectHideFlags: 3
@@ -6635,7 +6652,7 @@ GameObject:
   - component: {fileID: 1642072208}
   - component: {fileID: 1642072211}
   - component: {fileID: 1642072210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: phil1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,9 +9,10 @@ public class DialogueUI : MonoBehaviour
     
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TMP_Text textLabel;
-    [SerializeField] private DialogueObject testDialogue;
+    
     private TypeWrittingEffect typeWrittingEffect;
     private ResponseHandler responseHandler;
+    public PlayerController player;
     private void Start()
     {
         
@@ -19,7 +20,7 @@ public class DialogueUI : MonoBehaviour
         responseHandler = GetComponent<ResponseHandler>();
         CloseDialogueBox();
         responseHandler.CloseResponse();
-        ShowDialogue(testDialogue);
+        
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
@@ -50,6 +51,8 @@ public class DialogueUI : MonoBehaviour
         else
         {
              CloseDialogueBox();
+             player.canControl = true;
+
         }
 
 
