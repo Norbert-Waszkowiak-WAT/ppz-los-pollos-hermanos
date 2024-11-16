@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
         }
         else if(collider2D.GetComponent<IInteractable>()==null)
         {
-            Debug.Log("getcomponent chujnia");
+            Debug.Log("getcomponent ");
         }
 
 
