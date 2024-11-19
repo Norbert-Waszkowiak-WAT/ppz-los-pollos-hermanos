@@ -15,7 +15,7 @@ public class EnemyGenerating : MonoBehaviour
     private int enemyCount;
     private int obstacleCount;
    
-    [SerializeField] GameObject room;
+    
     
   
 
@@ -33,8 +33,8 @@ public class EnemyGenerating : MonoBehaviour
     {
         while(obstacleCount<10)
         {
-            yPos = Random.Range((int)room.transform.position.y-6, (int)room.transform.position.y+6);
-            xPos = Random.Range((int)room.transform.position.x-6, (int)room.transform.position.x+6);
+            yPos = Random.Range((int)transform.position.y-6, (int)transform.position.y+6);
+            xPos = Random.Range((int)transform.position.x-6, (int)transform.position.x+6);
             Collider2D collider2D = Physics2D.OverlapCircle(new Vector2(xPos,yPos), 0.2f);
             if(collider2D ==null)
             {
@@ -52,8 +52,8 @@ public class EnemyGenerating : MonoBehaviour
     IEnumerator EnemyDrop()
     {
        while(enemyCount<7){
-        yPos = Random.Range((int)room.transform.position.y-6, (int)room.transform.position.y+6);
-        xPos = Random.Range((int)room.transform.position.x-6, (int)room.transform.position.x+6);
+        yPos = Random.Range((int)transform.position.y-6, (int)transform.position.y+6);
+        xPos = Random.Range((int)transform.position.x-6, (int)transform.position.x+6);
 
         
         Collider2D collider2D = Physics2D.OverlapCircle(new Vector2(xPos,yPos), 0.2f);
