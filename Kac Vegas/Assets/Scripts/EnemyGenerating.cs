@@ -1,20 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
+using Random = UnityEngine.Random;
 using Vector2 = UnityEngine.Vector2;
 
 public class EnemyGenerating : MonoBehaviour
 {
-    public GameObject theEnemy;
+   
     public GameObject obstacle;
     public PlayerController player;
     private int xPos;
     private int yPos;
     private int enemyCount;
     private int obstacleCount;
+    public GameObject[] objectsToSpawn;
 
    
     
@@ -23,11 +26,14 @@ public class EnemyGenerating : MonoBehaviour
 
     void Start()
     {
-
+          
         StartCoroutine(ObstacleDrop());
         StartCoroutine(EnemyDrop());
 
     }
+
+  
+
     void Update()
     {
         
@@ -39,6 +45,9 @@ public class EnemyGenerating : MonoBehaviour
     IEnumerator ObstacleDrop()
     {
         obstacleCount =Random.Range(2,10);
+        
+
+
         while(obstacleCount<10)
         {
             yPos = Random.Range((int)transform.position.y-5, (int)transform.position.y+5);
@@ -59,8 +68,10 @@ public class EnemyGenerating : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
-        enemyCount =Random.Range(2,10);
-       while(enemyCount<7){
+        enemyCount =Random.Range(2,5);
+        int randomIndex = Random.Range(0, objectsToSpawn.Length);
+        GameObject selectedObject = objectsToSpawn[randomIndex];
+        while(enemyCount<7){
         yPos = Random.Range((int)transform.position.y-5, (int)transform.position.y+5);
         xPos = Random.Range((int)transform.position.x-5, (int)transform.position.x+5);
 
@@ -68,7 +79,7 @@ public class EnemyGenerating : MonoBehaviour
         Collider2D collider2D = Physics2D.OverlapCircle(new Vector2(xPos,yPos), 0.2f);
         if(collider2D ==null)
         {
-            Instantiate(theEnemy, new Vector2(xPos,yPos),Quaternion.identity);
+            Instantiate(selectedObject, new Vector2(xPos,yPos),Quaternion.identity);
             enemyCount+=1;
         }
        }
