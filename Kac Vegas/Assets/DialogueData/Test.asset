@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Hello!
+  - Hello nigga!
+  - 'I have some weapons for sale?
 
-'
-  - Hello #2
+    You interested in?'
   responses:
   - responseText: Yes
     dialogueObject: {fileID: 11400000, guid: ccfd845b4a3fa8f4ca2d85dc2d756485, type: 2}

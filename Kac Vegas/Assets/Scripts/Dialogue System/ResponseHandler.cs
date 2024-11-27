@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class ResponseHandler : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class ResponseHandler : MonoBehaviour
     foreach(Response response in responses)
     {
         GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseCointainer);
-        responseButton.gameObject.SetActive(true);
+        responseButton.SetActive(true);
         responseButton.GetComponent<TMP_Text>().text=response.ResponseText;
         responseButton.GetComponent<Button>().onClick.AddListener(()=> OnPickedResponse(response));
         tempResponseButtons.Add(responseButton);

@@ -10,10 +10,12 @@ public class EnemyGenerating : MonoBehaviour
 {
     public GameObject theEnemy;
     public GameObject obstacle;
+    public PlayerController player;
     private int xPos;
     private int yPos;
     private int enemyCount;
     private int obstacleCount;
+
    
     
     
@@ -21,20 +23,26 @@ public class EnemyGenerating : MonoBehaviour
 
     void Start()
     {
+
         StartCoroutine(ObstacleDrop());
         StartCoroutine(EnemyDrop());
 
+    }
+    void Update()
+    {
+        
     }
 
 
     
 
-     IEnumerator ObstacleDrop()
+    IEnumerator ObstacleDrop()
     {
+        obstacleCount =Random.Range(2,10);
         while(obstacleCount<10)
         {
-            yPos = Random.Range((int)transform.position.y-6, (int)transform.position.y+6);
-            xPos = Random.Range((int)transform.position.x-6, (int)transform.position.x+6);
+            yPos = Random.Range((int)transform.position.y-5, (int)transform.position.y+5);
+            xPos = Random.Range((int)transform.position.x-5, (int)transform.position.x+5);
             Collider2D collider2D = Physics2D.OverlapCircle(new Vector2(xPos,yPos), 0.2f);
             if(collider2D ==null)
             {
@@ -51,9 +59,10 @@ public class EnemyGenerating : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
+        enemyCount =Random.Range(2,10);
        while(enemyCount<7){
-        yPos = Random.Range((int)transform.position.y-6, (int)transform.position.y+6);
-        xPos = Random.Range((int)transform.position.x-6, (int)transform.position.x+6);
+        yPos = Random.Range((int)transform.position.y-5, (int)transform.position.y+5);
+        xPos = Random.Range((int)transform.position.x-5, (int)transform.position.x+5);
 
         
         Collider2D collider2D = Physics2D.OverlapCircle(new Vector2(xPos,yPos), 0.2f);
@@ -65,6 +74,16 @@ public class EnemyGenerating : MonoBehaviour
        }
         yield return null;
     }
+
+    void PlayerInside(PlayerController player){
+       if(player.transform.position.x == transform.position.x+6 && player.transform.position.y == transform.position.y+6)
+       {
+            
+       }
+
+    }
+    
+
    
     
 }

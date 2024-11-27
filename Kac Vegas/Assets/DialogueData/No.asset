@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: No
   m_EditorClassIdentifier: 
   dialogue:
-  - NOO i'm not into that...
+  - Get out you sick weirdo...
+  responses: []
