@@ -7,22 +7,24 @@ public class EnemyControl : MonoBehaviour
     public float moveSpeed = 2f;
     private bool canAttack = true;
     private PlayerController player;
-    private bool doorsOpened= true;
+    
 
     void Start()
     {
         
         player = FindObjectOfType<PlayerController>();
+      
     }
 
     void Update()
     {
-        if(doorsOpened ==false){
+       
+       
         if (player != null)
         {
             Moving();
         }
-        }
+        
     }
 
     void Moving()

@@ -18,17 +18,17 @@ public class EnemyGenerating : MonoBehaviour
     private int enemyCount;
     private int obstacleCount;
     public GameObject[] objectsToSpawn;
-
-   
+    public Doors doors;
     
-    
-  
+    void Awake()
+    {
+       
+    }
 
     void Start()
     {
-          
-        StartCoroutine(ObstacleDrop());
-        StartCoroutine(EnemyDrop());
+        
+       
 
     }
 
@@ -36,7 +36,11 @@ public class EnemyGenerating : MonoBehaviour
 
     void Update()
     {
-        
+        if(doors.isActive==1){
+            StartCoroutine(ObstacleDrop());
+            StartCoroutine(EnemyDrop());
+            doors.isActive=2;
+        }
     }
 
 
@@ -69,9 +73,10 @@ public class EnemyGenerating : MonoBehaviour
     IEnumerator EnemyDrop()
     {
         enemyCount =Random.Range(2,5);
+        
+        while(enemyCount<7){
         int randomIndex = Random.Range(0, objectsToSpawn.Length);
         GameObject selectedObject = objectsToSpawn[randomIndex];
-        while(enemyCount<7){
         yPos = Random.Range((int)transform.position.y-5, (int)transform.position.y+5);
         xPos = Random.Range((int)transform.position.x-5, (int)transform.position.x+5);
 
@@ -86,13 +91,7 @@ public class EnemyGenerating : MonoBehaviour
         yield return null;
     }
 
-    void PlayerInside(PlayerController player){
-       if(player.transform.position.x == transform.position.x+6 && player.transform.position.y == transform.position.y+6)
-       {
-            
-       }
-
-    }
+     
     
 
    
