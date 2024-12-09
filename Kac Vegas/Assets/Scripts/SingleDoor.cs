@@ -6,7 +6,7 @@ public class SingleDoor : MonoBehaviour
 {
    
    private SpriteRenderer mySprite;
-   private BoxCollider2D doorcollider;
+  
    public Doors doors;
 
 
@@ -19,7 +19,7 @@ public class SingleDoor : MonoBehaviour
         
        
         mySprite = GetComponent<SpriteRenderer>();
-        doorcollider = GetComponent<BoxCollider2D>();
+        
     }
    
 
@@ -28,7 +28,7 @@ public class SingleDoor : MonoBehaviour
     {
        
 
-        Debug.Log("Trigger1");
+        Debug.Log("gTriger1");
         
         if (other.CompareTag("Player") && doors != null && doors.isActive == 0)
         {

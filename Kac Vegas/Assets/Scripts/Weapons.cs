@@ -16,12 +16,37 @@ public class Weapons : MonoBehaviour
    }
 
 
-   void Update()
-   {
-      Vector3 mousePos = Input.mousePosition;
-      Vector3 ScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-      float angleRad = Mathf.Atan2(mousePos.y - transform.position.y,mousePos.x - transform.position.x);
-      float angleDef = (360 / Mathf.PI) * angleRad-90;
-      transform.rotation = Quaternion.Euler(0f,0f, angleDef);
-   }
+ void Update()
+{
+    
+    Vector3 mousePos = Input.mousePosition;
+    Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
+
+  
+    Vector3 direction = worldMousePos - transform.position;
+    float angleRad = Mathf.Atan2(direction.y, direction.x);
+    float angleDeg = angleRad * Mathf.Rad2Deg;
+
+    SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+
+    if (worldMousePos.x < transform.position.x)
+    {
+        
+        spriteRenderer.flipX = true;
+
+        
+        transform.rotation = Quaternion.Euler(0f, 0f, angleDeg + 180f);
+    }
+    else
+    {
+       
+        spriteRenderer.flipX = false;
+
+        
+        transform.rotation = Quaternion.Euler(0f, 0f, angleDeg);
+    }
+}
+
+
 }

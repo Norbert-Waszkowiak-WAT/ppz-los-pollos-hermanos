@@ -12,7 +12,21 @@ public class Doors : MonoBehaviour
 
     private void Awake()
     {
-      
+      for(int i=0;i<door.Length;i++)
+            {
+                Renderer doorSprite = door[i].GetComponent<Renderer>();
+                doorSprite.material.color = Color.clear;
+            }
+        for (int i = 0; i < door.Length; i++)
+            {
+
+            BoxCollider2D doorCollider = door[i].GetComponent<BoxCollider2D>();
+
+            if (doorCollider != null)
+                {
+                 //doorCollider.enabled = false;
+                }
+            }
     }
 
    void Start()
@@ -51,8 +65,8 @@ public class Doors : MonoBehaviour
             
             for(int i=0;i<door.Length;i++)
             {
-                SpriteRenderer doorSprite = door[i].GetComponent<SpriteRenderer>();
-                doorSprite.color = Color.red;
+                Renderer doorSprite = door[i].GetComponent<Renderer>();
+                doorSprite.material.color = Color.white;
             }
 
 
