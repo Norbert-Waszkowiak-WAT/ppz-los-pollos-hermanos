@@ -10,15 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63064dbb75ffeaf47b042f615bfb8790, type: 3}
-  m_Name: Test
+  m_Name: No
   m_EditorClassIdentifier: 
   dialogue:
-  - Hello nigga!
-  - 'I have some weapons for sale?
-
-    You interested in?'
-  responses:
-  - responseText: Yes
-    dialogueObject: {fileID: 11400000, guid: ccfd845b4a3fa8f4ca2d85dc2d756485, type: 2}
-  - responseText: No
-    dialogueObject: {fileID: 11400000, guid: 97b26dcdf83cda44a94f6f5db3d8ecc2, type: 2}
+  - Get out you sick weirdo...
+  responses: []
