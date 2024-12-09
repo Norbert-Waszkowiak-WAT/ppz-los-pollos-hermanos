@@ -93,5 +93,16 @@ Poziom 1:
 ![Zrzut ekranu 2024-11-04 182650](https://github.com/user-attachments/assets/afb5d326-1776-4538-abd3-a5c94716f050)
 ![Zrzut ekranu 2024-11-04 182705](https://github.com/user-attachments/assets/42391f0f-6ef1-43ef-8734-56b73b645b39)
 
+Etap 2:
+- Dodanie systemu broni i ich podnoszenia opuszczania
+- Losowe generowanie przeszkód i przeciwników na arenie
+- Zaprogramowanie AI dla różnych klas przeciwników
+- Stworzenie systemu zamykania aren, gdy gracz znajduje się w środku
+- Dodanie postaci
+- ukończenie systemu dialogów. Dodanie odpowiedzi
 
-
+  
+![Zrzut ekranu 2024-12-09 194813](https://github.com/user-attachments/assets/52edc66b-3d97-4677-8557-a0fa80efbefe)
+![Zrzut ekranu 2024-12-09 194939](https://github.com/user-attachments/assets/32fcff9d-6712-4faf-bef6-a90fb0a92e0e)
+![Zrzut ekranu 2024-12-09 195037](https://github.com/user-attachments/assets/b841d406-8b14-4a71-9837-bb53c38bd2a1)
+![Zrzut ekranu 2024-12-09 195018](https://github.com/user-attachments/assets/b8e713c6-ab67-4b71-b03d-6262327bdc59)
