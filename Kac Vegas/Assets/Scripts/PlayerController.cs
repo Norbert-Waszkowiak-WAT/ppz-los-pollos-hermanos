@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour
     public DialogueUI DialogueUI => dialogueUI;
     public IInteractable interactable;
     ContactFilter2D filter;
+    public GameObject weapon;
+    public EquiptScript equiptScript;
+   
+    private GameObject weaponPicked;
 
     public bool canControl = true;
 
@@ -24,8 +28,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
+        equiptScript = GetComponent<EquiptScript>();
         filter = new ContactFilter2D();
-        filter.SetLayerMask(LayerMask.GetMask("DialogueAble"));
+        filter.SetLayerMask(LayerMask.GetMask("DialogueAble") | LayerMask.GetMask("Weapons"));
         filter.useLayerMask = true;
 
 
@@ -45,12 +50,26 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             FindInteractable();
+            FindWeapons();
             if (interactable!= null)
             {
                 
                 StartDialogue();
                 
             }
+            if(weapon !=null)
+            {
+                PickUp();
+            }
+        }
+        
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            if(weaponPicked!=null)
+            {
+                equiptScript.UnequipObject(weaponPicked);
+            }
+            
         }
 
     }
@@ -123,6 +142,42 @@ public class PlayerController : MonoBehaviour
             dialogueUI.ShowDialogue(interactable.dialogueObject);
          }
     }
+
+    void FindWeapons()
+    {
+        weapon = null;
+        Collider2D collider2D = Physics2D.OverlapCircle(gameObject.transform.position, 1.5f,filter.layerMask);
+        Debug.Log(collider2D);
+        if(collider2D != null && collider2D.GetComponent<Weapons>()!=null)
+        {
+            weapon = collider2D.gameObject;
+            return;
+        }
+        else if(collider2D==null)
+        {
+            Debug.Log("Brak weapons");
+        }
+        else if(collider2D.gameObject.GetComponent<Weapons>() ==null)
+        {
+            Debug.Log("getcomponent weapons ");
+        }
+
+
+    }
+
+    void PickUp()
+    {
+         if(weapon!=null)
+         {
+            Debug.Log(equiptScript +"equipt");
+
+           equiptScript.EquipObject(weapon);
+           weaponPicked=weapon;
+         }
+         
+    }
+
+ 
 
 
 }
