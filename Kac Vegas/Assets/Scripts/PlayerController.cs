@@ -71,6 +71,15 @@ public class PlayerController : MonoBehaviour
             }
             
         }
+        if(Input.GetMouseButton(0))
+        {
+            if(weaponPicked!=null)
+            {
+                Weapons weapon = weaponPicked.GetComponent<Weapons>();
+
+                weapon.Attacking();
+            }
+        }
 
     }
 

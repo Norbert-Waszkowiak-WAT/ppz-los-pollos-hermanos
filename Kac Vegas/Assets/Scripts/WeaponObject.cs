@@ -8,14 +8,17 @@ using UnityEngine;
 public class WeaponObject : ScriptableObject
 {
    [SerializeField] private int atk;
-   [SerializeField] private int speed;
+   [SerializeField] private float speed;
    [SerializeField] private int manna;
+   [SerializeField] public GameObject bullet;
   
 
    public int Atk => atk;
-   public int Speed => speed;
+   public float Speed => speed;
    public int Manna => manna;
+   public GameObject Bullet => bullet;
 
 
+   
 }
 
