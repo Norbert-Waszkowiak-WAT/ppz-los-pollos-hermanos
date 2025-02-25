@@ -10,7 +10,7 @@ public class ChickenAI : MonoBehaviour
 
    private State state;
    private ChickenPathFinding chickenPathFinding;
-
+   
    private void Awake()
    {
     chickenPathFinding = GetComponent<ChickenPathFinding>();

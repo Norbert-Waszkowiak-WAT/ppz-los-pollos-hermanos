@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
                 Weapons weapon = weaponPicked.GetComponent<Weapons>();
 
                 weapon.Attacking();
+                
             }
         }
 

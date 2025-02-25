@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5225800947703184724}
   - component: {fileID: 1765833355199184452}
   - component: {fileID: 1049707915148563041}
+  - component: {fileID: 2328334263022243451}
   m_Layer: 0
   m_Name: ChickenCleaner
   m_TagString: Enemy
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6061a6d73d3294291b781b3b88e7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 5
 --- !u!114 &2582714005777631877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,3 +199,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2328334263022243451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207154641199905949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b118e8e7959d01c47811d74c54503462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10

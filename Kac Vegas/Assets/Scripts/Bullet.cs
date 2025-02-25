@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] public WeaponObject weaponObject;
+    
+    
+    
     
 
+    
     void Start()
     {
        
@@ -14,14 +20,7 @@ public class Bullet : MonoBehaviour
        
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-       if(collision.gameObject.CompareTag("Enemy"))
-       {
-        Destroy(gameObject);
-       }
-       
-         
-        
-    }
+    
+
+    
 }

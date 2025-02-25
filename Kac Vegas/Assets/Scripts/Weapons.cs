@@ -56,7 +56,7 @@ public class Weapons : MonoBehaviour
         yield return null;
     }
 
-    Destroy(bullet); 
+    Destroy(bullet);
 }
 public void Attacking()
 {
@@ -68,9 +68,10 @@ public void Attacking()
     GameObject bulletInstance = Instantiate(weaponObject.bullet, transform.position, Quaternion.identity);
     StartCoroutine(MoveBullet(bulletInstance, mousePos));
     StartCoroutine(ShootingCooldown());
+    
     }
     
-
+    
 }
 IEnumerator ShootingCooldown()
     {

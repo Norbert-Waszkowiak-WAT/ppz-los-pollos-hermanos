@@ -48,6 +48,7 @@ public class EnemyControl : MonoBehaviour
     {
         moveSpeed=3f;
         Debug.Log("Attacking Player!");
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
